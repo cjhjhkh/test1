@@ -1,0 +1,140 @@
+/*首页的地图*/
+.slot {
+  /*跟底部一样*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.slot .slotTrack {
+  width: 4.76%;
+  height: 100%;
+  float: left;
+}
+.slot .slotTrack:nth-child(1) {
+  width: 4.8%;
+}
+.slot .slotTrack .slotItem {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.slot:nth-child(2) .slotItem {
+  border-top: 1px solid rgba(187, 187, 187, 0.3);
+}
+.register {
+  background-color: darkcyan;
+  position: relative;
+}
+.register .title {
+  width: 45px;
+  height: 100%;
+  position: absolute;
+  left: 5.8%;
+  top: 0;
+}
+.register .title .tit-text {
+  color: #fff;
+  padding: 45px 0 45px 0;
+  font-size: 30px;
+  /*writing-mode: tb-rl;  IE浏览器使用*/
+  writing-mode: vertical-lr;
+  /*纵向排版*/
+}
+.register .title .tit-text::before,
+.register .title .tit-text::after {
+  content: '';
+  width: 34px;
+  height: 24px;
+  margin: 0 5px;
+  position: absolute;
+  background-image: url(../images/tit_icon.png);
+}
+.register .title .tit-text::before {
+  top: 0;
+  background-position: left;
+}
+.register .title .tit-text::after {
+  bottom: 0;
+  background-position: right;
+}
+.register .modules {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+}
+.register .modules .book {
+  opacity: 0;
+  height: 37%;
+  width: 9.52%;
+  background-image: url(../images/book_bgc1.png);
+  position: absolute;
+  background-size: cover;
+  left: 14.32%;
+  top: -18.6%;
+  transition: all 1s;
+  box-shadow: 0px 0px 38px 0px rgba(4, 1, 1, 0.4);
+}
+.register .modules .book:nth-child(2) {
+  left: 23.84%;
+  top: -6%;
+}
+.register .modules .book:nth-child(3) {
+  left: 28.6%;
+  top: -42.8%;
+}
+.register .modules .book:nth-child(4) {
+  left: 38.12%;
+  top: -29.7%;
+}
+.register .modules .book:nth-child(5) {
+  left: 38.12%;
+  top: 7.3%;
+}
+.register .modules .book:nth-child(6) {
+  left: 47.64%;
+  top: -18.5%;
+}
+.register .modules .book:nth-child(7) {
+  left: 57.16%;
+  top: -18.5%;
+}
+.register .modules .book:nth-child(8) {
+  left: 71.44%;
+  top: -38.5%;
+}
+.register .modules .book:nth-child(9) {
+  left: 76.2%;
+  top: 7%;
+}
+.register .modules .book:nth-child(10) {
+  left: 85.72%;
+  top: -18.5%;
+}
+.register .modules .book .contain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15.625%;
+  height: 100%;
+}
+.register .modules .book .contain a {
+  position: relative;
+  height: 100%;
+}
+.register .modules .book .contain .img {
+  width: 76%;
+  height: 50%;
+  margin: auto;
+  margin-bottom: 12%;
+  background-size: cover;
+}
+.register .modules .book .contain .text {
+  height: 27px;
+  font-family: "微软雅黑";
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  white-space: normal;
+}

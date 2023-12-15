@@ -1,0 +1,130 @@
+.hotSpot{
+    // display: flex;
+    display: none;
+    // height: 109px;
+    min-height: 109px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../images/hotSpot.png) no-repeat;
+    // background-size: contain;
+    background-size: cover;
+    // background-position: left center;
+    z-index: 1000;
+    padding-top: 33px;
+    transition: all 700ms;
+    .hot-wra{
+        display: flex;
+        position: relative;
+        height: 76px;
+        // width: 77.0833%;
+        width: 88%;
+        margin: auto;
+        // background-color: salmon;
+        .tit{
+            color: #fff;
+            // float: left;
+            padding-top: 23px;
+            font-size: 30px;
+            line-height: 1.2;
+            // background-color: steelblue;
+        }
+        .cont{
+            height: 100%;
+            padding: 0 200px 0 60px;
+            // background-color: seagreen;
+            overflow: hidden;
+            .area{
+                height: 100%;
+                overflow: hidden;
+                font-size: 18px;
+                line-height: 1.2;
+                // background-color: khaki;
+                .itemBox{
+                    // width: 100%;
+                    height: 100%;
+                    // min-width: 500px;
+                    // z-index: 1;
+                    // background-color: sandybrown;
+
+                    // position: relative;
+                    // width: 100%;
+                    // height: 100%;
+                    // z-index: 1;
+                    // display: table;
+                    // white-space: nowrap;
+                    .item{
+                        display: inline-block;
+                        // vertical-align: middle;
+                        // background-color: gold;
+                        // min-width: 217px;
+                        width: 746px;
+                        height: 76px;
+                        padding-top: 28px;
+                        margin-right: 70px;
+                        a{
+                            display: inline-block;
+                            vertical-align: middle;
+                            position: relative;
+                            color: #fff;
+                            padding: 2px 0 0 42px;
+                            // background-color: darkcyan;
+                            &::before{
+                                content: '';
+                                width: 23px;
+                                height: 23px;
+                                background-image: url(../images/item-icon.png);
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .close{
+            position: relative;
+            top: 27%;
+            width: 44px;
+            height: 34px;
+            // background-color: salmon;
+            a{
+                display: inline-block;
+                width: 42.53px;
+                height: 42.53px;
+                // background-color: aqua;
+                background: url(../images/close.png) no-repeat;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.active{
+    display: flex;
+}
+@media screen and (max-width: 1600px) and (min-width: 1340px) {//80%-100%
+    .hotSpot .hot-wra .cont .area .itemBox .item{
+        margin-right: 40px;
+        // width: 217px;/*原来是width：746px ,后来变为max-width:217px,宽度不会改变，所以先把宽度设为0*/
+        min-width: 217px;
+        width: auto;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .hotSpot .hot-wra{
+        width: 77.0833%;
+    }
+    .hotSpot .hot-wra .cont{
+        padding-left: 120px;
+    }
+}
+@media screen and (min-width: 1700px) {//<75%
+    .hotSpot .hot-wra .cont .area .itemBox .item{
+        margin-right: 70px;
+        // width: 217px;/*原来是width：746px ,后来变为max-width:217px,宽度不会改变，所以先把宽度设为0*/
+        min-width: 217px;
+        width: auto;
+    }
+}

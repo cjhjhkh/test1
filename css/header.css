@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.home,
+.register,
+.map,
+.figure,
+.display,
+.plan,
+.footer {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.tipAlert-wra {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/alert_mask.png);
+  position: absolute;
+  z-index: 43;
+}
+.tipAlert-wra .tipAlert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -120px;
+  padding: 30px;
+  background: #fff;
+  width: 270px;
+  height: 153px;
+  text-align: center;
+}
+.tipAlert-wra .tipAlert .text {
+  padding-bottom: 15px;
+  font-size: 16px;
+  color: #474747;
+}
+.tipAlert-wra .tipAlert .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/clos.png);
+  background-size: contain;
+}
+.tipAlert-wra .tipAlert .sub {
+  display: inline-block;
+  /*刚开始写的是display: block;导致text-align: center;对这个不起作用*/
+  width: 91px;
+  height: 29px;
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+  font-size: 14px;
+  color: #707070;
+}
+.home {
+  position: relative;
+}
+.home .search .searchBox {
+  /*点击后出现搜索框*/
+  display: none;
+  opacity: 0;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  right: 160px;
+  top: -5px;
+  width: 356.67px;
+  height: 36px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.home .search .searchBox .input_wra {
+  padding: 0 8px;
+  width: 316.67px;
+  height: 18.67px;
+  border-right: 1px solid #474747;
+}
+.home .search .searchBox input {
+  width: 300px;
+  height: 18.67px;
+  outline: none;
+  border: none;
+}
+.home .search .searchBox .search-btn {
+  padding: 0 5px;
+  width: 40px;
+  height: 100%;
+  background-color: seagreen;
+  border: none;
+  float: right;
+  background: url("../images/search\ \(1\).svg") no-repeat;
+  background-size: 35px 20px;
+  background-position: 2px 6px;
+  cursor: pointer;
+}
+.home .search .condict {
+  display: flex;
+}
+.home .search .active {
+  transform: translateX(-167px);
+  opacity: 1;
+}
+.slick-dots {
+  /*下面索引*/
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  height: 31px;
+  width: 100%;
+}
+.slick-dots .slick-dot {
+  width: 31px;
+  height: 31px;
+  margin: 0 10px;
+  background: url(../images/slick-dot.png) left;
+}
+.slick-dots .slick-dot:nth-child(1) {
+  margin-left: 70px;
+}
+.slick-dots .slick-dot:hover {
+  opacity: 0.8;
+}
+.slick-dots .active {
+  background-position: right;
+}
+/*轮播图部分*/
+.slickBox {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /*外面大盒子设置overflow: hidden;*/
+}
+.slickBox .slick-wra {
+  height: 100%;
+  background-color: #897977;
+}
+.slickBox .slick-wra div[class^=slick-item] {
+  /*属性选择器，选择以slick-item开头的*/
+  width: 100%;
+  height: 100vh;
+  float: left;
+  background-size: cover;
+  position: absolute;
+  transition: all 700ms ease;
+}
+.slick-item1 {
+  background-color: sandybrown;
+  background-image: url(../images/slide_bgc1.jpg);
+  z-index: -1;
+  opacity: 0;
+}
+.slick-item2 {
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.slick-item3 {
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.slick-item4 {
+  background-image: url(../images/slide_bgc4.jpg);
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.slick-item5 {
+  background-image: url(../images/slide_bgc5.jpg);
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.slick-wra .active {
+  z-index: 0;
+  opacity: 1;
+}
+@media screen and (max-width: 1200px) {
+  .home .nav .nav-wra {
+    margin-left: 190px;
+  }
+  .home .header .tools {
+    left: 828px;
+  }
+  .slick-dots .slick-dot:nth-child(1) {
+    margin-left: 187px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .home .header .tools {
+    right: 70px;
+  }
+  .home .nav .nav-wra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .slick-dots .slick-dot:nth-child(1) {
+    margin-left: 12px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .home .header .tools {
+    right: 61px;
+  }
+  .home .nav .nav-wra > li .nav-tit {
+    margin: 0 38px;
+  }
+  .home .nav .nav-wra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home .nav .nav-wra > li:nth-child(5) .link-list {
+    width: 1566.33px;
+    margin-left: 166px;
+  }
+  .home .nav .nav-wra > li:nth-child(6) .link-list {
+    width: 1180.05px;
+    margin-left: 419.948px;
+  }
+  .home .nav .nav-wra > li:nth-child(7) .link-list {
+    width: 900.104px;
+    margin-left: 699.896px;
+  }
+  .home .nav .nav-wra > li:nth-child(8) .link-list {
+    width: 612px;
+    margin-left: 728px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .home .nav .nav-wra > li:nth-child(5) .link-list {
+    width: 1566.33px;
+    margin-left: 166px;
+  }
+  .home .nav .nav-wra > li:nth-child(6) .link-list {
+    width: 1284.56px;
+    margin-left: 422.444px;
+  }
+  .home .nav .nav-wra > li:nth-child(7) .link-list {
+    width: 820px;
+    margin-left: 520px;
+  }
+  .home .nav .nav-wra > li:nth-child(8) .link-list {
+    width: 612px;
+    margin-left: 728px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .home .nav .nav-wra > li:nth-child(5) .link-list {
+    width: 3700px;
+    margin-left: 266px;
+  }
+  .home .nav .nav-wra > li:nth-child(6) .link-list {
+    width: 2140px;
+    margin-left: 420px;
+  }
+  .home .nav .nav-wra > li:nth-child(7) .link-list {
+    width: 820px;
+    margin-left: 520px;
+  }
+  .home .nav .nav-wra > li:nth-child(8) .link-list {
+    width: 612px;
+    margin-left: 728px;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .home .nav .nav-wra > li:nth-child(5) .link-list {
+    width: 3700px;
+    margin-left: 266px;
+  }
+  .home .nav .nav-wra > li:nth-child(6) .link-list {
+    width: 100%;
+    margin-left: 320px;
+  }
+  .home .nav .nav-wra > li:nth-child(7) .link-list {
+    width: 820px;
+    margin-left: 520px;
+  }
+  .home .nav .nav-wra > li:nth-child(8) .link-list {
+    width: 612px;
+    margin-left: 728px;
+  }
+}

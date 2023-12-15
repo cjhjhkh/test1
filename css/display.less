@@ -1,0 +1,215 @@
+
+/*展览板块*/
+
+.display{
+    // width: 100%;
+    // height: 100vh;
+    // background-color: aqua;
+    overflow: hidden;
+    .display-wra{
+        width: 100%;
+        // height: 100%;
+        height: 100vh;
+        // background-color: saddlebrown;
+    }
+    .more{
+        display: inline-block;
+    }
+        .cont{
+            position: absolute;
+            left: 50%;
+            top: 26%;
+            margin-left: -15px;
+            // width: 30px;
+            // height: 300px;
+            // background-color: salmon;
+            color: #fff;
+
+            
+            
+
+        }
+        .tit{
+            position: relative;
+            // display: inline-block;
+            // height: 132px;
+            padding: 40px 0;
+            width: 1em;
+            font-size: 26px;
+            line-height: 1;
+            // background-color: rgb(37, 99, 152);
+            writing-mode: vertical-lr;
+            &::before,&::after{
+                content: '';
+                width: 32px;
+                height: 22px;
+                background: url(../images/tit_icon8.png) no-repeat;
+                position: absolute;
+                left: 0;
+                margin: 0 -3px;
+            }
+            &::before{
+                background-position: left;
+                top: 0;
+            }
+            &::after{
+                background-position: right;
+                bottom: 0;
+            }
+        }
+        .track{
+            // display: inline-block;
+            position: relative;
+            left: 50%;
+            height: 90px;
+            margin: 15px 0;
+            // width: 0.67px;
+            border-left: 1px dotted;
+        }
+        .more{
+            width: 24px;
+            height: 134px;
+            position: relative;
+            // display: inline-block;
+            padding: 35px 4px;
+            // width: 1em;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            line-height: 1;
+            // background-color: turquoise;
+            writing-mode: vertical-lr;
+            &::before,&::after{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url(../images/tit_icon9.png) no-repeat;
+                position: absolute;
+                left: 0;
+                // margin: 0 -3px;
+            }
+            &::before{
+                background-position: left;
+                top: 0;
+            }
+            &::after{
+                background-position: right;
+                bottom: 0;
+                right: 0;/*为啥没作用……？*/
+            }
+        }
+    .display-l{
+        position: relative;
+        width: 16.66%;
+        height: 100%;
+        float: left;
+        // background-color: darkcyan;
+        background: url(../images/display-tit.jpg) no-repeat center;
+        background-size: cover;
+        // writing-mode: vertical-lr;
+    }
+    .display-r{
+        float: right;
+        // overflow: hidden;
+        width: 83.34%;
+        height: 100%;
+        // background-color: salmon;
+        // .r-wra{
+        //     width: 100%;
+        //     height: 100%;
+            
+        // }
+        // &:hover{
+        //     .list-item{
+        //         &:not(:nth-child(1)){
+        //             width: 12%;
+        //         }                
+        //     }
+
+        // }
+        .list-item{
+            width: 20%;
+        }
+
+        .list-item{
+            position: relative;
+            height: 100%;
+            background: center no-repeat;
+            background-size: cover;
+            background-position: left;
+            float: left;
+            transition: all .5s;
+
+            // .active{/*移入第三、四、五个，第二个宽度为12%*/
+            //     width: 12%;
+            // }
+
+            .title{
+                position: absolute;
+                left: 12.5%;
+                top: 26%;
+                width: 30px;
+                writing-mode: vertical-lr;
+                transition: left .5s,margin .3s;
+                a{
+                    color: #f0e5d8;
+                    font-size: 26px;
+                    line-height: 1;
+                }
+            }
+            .wra{
+                left: 12.5%;
+                transition: left .5s, margin .3s;
+                margin-left: 0;
+            }
+            // &:nth-child(3),&:nth-child(4),&:nth-child(5){
+            //     float: right;
+            // }
+        }
+        .disp1{
+            background-image: url(../images/diaplay1.jpg);
+        }
+        .disp2{
+            background-image: url(../images/display2.jpg);
+        }
+        .disp3{
+            background-image: url(../images/display3.jpg);
+        }
+        .disp4{
+            background-image: url(../images/display4.jpg);
+        }
+        .disp5{
+            background-image: url(../images/display5.jpg);
+        }
+    }
+}
+.display-r{
+    &:hover{
+        .list-item{/*移到大盒子上，子宽度为12%*/
+            width: 12%;
+        }
+    }
+    .list-item{
+        &:hover{/*鼠标移到哪个，哪个宽度就44%*/
+            width: 44%;
+        }      
+        &:nth-child(1){/*第一个保持原来宽度*/
+            width: 20%;
+            &:hover{/*第一个hover后宽度改变*/
+                width: 44%;
+            }
+        }
+        &:nth-child(2){/*第一个宽度改变时，第二个宽度不变*/
+            width: 20%;
+            &:hover{/*第二个hover后宽度改变*/
+                width: 44%;
+            }
+        }  
+    }
+}
+.display{
+    .display-r{
+        .active{/*移入第三、四、五个，第二个宽度为12%*/
+            width: 12%;
+        }
+    }
+}

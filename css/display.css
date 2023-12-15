@@ -1,0 +1,166 @@
+/*展览板块*/
+.display {
+  overflow: hidden;
+}
+.display .display-wra {
+  width: 100%;
+  height: 100vh;
+}
+.display .more {
+  display: inline-block;
+}
+.display .cont {
+  position: absolute;
+  left: 50%;
+  top: 26%;
+  margin-left: -15px;
+  color: #fff;
+}
+.display .tit {
+  position: relative;
+  padding: 40px 0;
+  width: 1em;
+  font-size: 26px;
+  line-height: 1;
+  writing-mode: vertical-lr;
+}
+.display .tit::before,
+.display .tit::after {
+  content: '';
+  width: 32px;
+  height: 22px;
+  background: url(../images/tit_icon8.png) no-repeat;
+  position: absolute;
+  left: 0;
+  margin: 0 -3px;
+}
+.display .tit::before {
+  background-position: left;
+  top: 0;
+}
+.display .tit::after {
+  background-position: right;
+  bottom: 0;
+}
+.display .track {
+  position: relative;
+  left: 50%;
+  height: 90px;
+  margin: 15px 0;
+  border-left: 1px dotted;
+}
+.display .more {
+  width: 24px;
+  height: 134px;
+  position: relative;
+  padding: 35px 4px;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  line-height: 1;
+  writing-mode: vertical-lr;
+}
+.display .more::before,
+.display .more::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url(../images/tit_icon9.png) no-repeat;
+  position: absolute;
+  left: 0;
+}
+.display .more::before {
+  background-position: left;
+  top: 0;
+}
+.display .more::after {
+  background-position: right;
+  bottom: 0;
+  right: 0;
+  /*为啥没作用……？*/
+}
+.display .display-l {
+  position: relative;
+  width: 16.66%;
+  height: 100%;
+  float: left;
+  background: url(../images/display-tit.jpg) no-repeat center;
+  background-size: cover;
+}
+.display .display-r {
+  float: right;
+  width: 83.34%;
+  height: 100%;
+}
+.display .display-r .list-item {
+  width: 20%;
+}
+.display .display-r .list-item {
+  position: relative;
+  height: 100%;
+  background: center no-repeat;
+  background-size: cover;
+  background-position: left;
+  float: left;
+  transition: all 0.5s;
+}
+.display .display-r .list-item .title {
+  position: absolute;
+  left: 12.5%;
+  top: 26%;
+  width: 30px;
+  writing-mode: vertical-lr;
+  transition: left 0.5s, margin 0.3s;
+}
+.display .display-r .list-item .title a {
+  color: #f0e5d8;
+  font-size: 26px;
+  line-height: 1;
+}
+.display .display-r .list-item .wra {
+  left: 12.5%;
+  transition: left 0.5s, margin 0.3s;
+  margin-left: 0;
+}
+.display .display-r .disp1 {
+  background-image: url(../images/diaplay1.jpg);
+}
+.display .display-r .disp2 {
+  background-image: url(../images/display2.jpg);
+}
+.display .display-r .disp3 {
+  background-image: url(../images/display3.jpg);
+}
+.display .display-r .disp4 {
+  background-image: url(../images/display4.jpg);
+}
+.display .display-r .disp5 {
+  background-image: url(../images/display5.jpg);
+}
+.display-r:hover .list-item {
+  /*移到大盒子上，子宽度为12%*/
+  width: 12%;
+}
+.display-r .list-item:hover {
+  /*鼠标移到哪个，哪个宽度就44%*/
+  width: 44%;
+}
+.display-r .list-item:nth-child(1) {
+  /*第一个保持原来宽度*/
+  width: 20%;
+}
+.display-r .list-item:nth-child(1):hover {
+  /*第一个hover后宽度改变*/
+  width: 44%;
+}
+.display-r .list-item:nth-child(2) {
+  /*第一个宽度改变时，第二个宽度不变*/
+  width: 20%;
+}
+.display-r .list-item:nth-child(2):hover {
+  /*第二个hover后宽度改变*/
+  width: 44%;
+}
+.display .display-r .active {
+  /*移入第三、四、五个，第二个宽度为12%*/
+  width: 12%;
+}

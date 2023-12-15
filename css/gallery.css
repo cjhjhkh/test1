@@ -1,0 +1,119 @@
+/*图集*/
+.header .head .logo a span,
+.header .tools .calendar,
+.header .nav .nav-wra > li .nav-tit {
+  color: #333;
+}
+.header .nav,
+.header .head {
+  background-image: none;
+}
+.header .head,
+.header .nav-wra {
+  background-color: #fff;
+}
+.bread-mod {
+  background-image: url(../images/resource-bgi.png);
+  top: 130px;
+}
+.bread-mod .wra .bread-item:not(:nth-child(1))::before {
+  border-color: #333;
+}
+.bread-mod .bread-item a {
+  color: #333;
+}
+.resource {
+  width: 100%;
+  padding: 188px 0 100px 0;
+  background-color: #60f482;
+  background-image: url(../images/resource-bgi.png);
+}
+.resource .resource-wra {
+  width: 1230px;
+  margin: auto;
+}
+.resource .resource-wra .re-head {
+  width: 100%;
+  height: 200px;
+  padding: 36px 0 40px;
+  text-align: center;
+}
+.resource .resource-wra .re-head .tit {
+  line-height: 44px;
+  font-size: 30px;
+}
+.resource .resource-wra .re-head .tit::before,
+.resource .resource-wra .re-head .tit::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 44px;
+  background: url(../images/tit_icon12.png) no-repeat;
+  vertical-align: top;
+}
+.resource .resource-wra .re-head .tit::before {
+  background-position: left;
+  margin-right: 18px;
+}
+.resource .resource-wra .re-head .tit::after {
+  background-position: right;
+  margin-left: 18px;
+}
+.resource .resource-wra .re-head .tabBox {
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+}
+.resource .resource-wra .re-head .tabBox .link {
+  position: relative;
+  height: 100%;
+  width: 190px;
+  display: inline-block;
+  margin: 0 18px;
+  padding: 0 10px;
+  font-family: "微软雅黑";
+  line-height: 48px;
+}
+.resource .resource-wra .re-head .tabBox .link .inner {
+  width: 170px;
+  height: 48px;
+  background-image: url(../images/frame.png);
+}
+.resource .resource-wra .re-head .tabBox .link::before,
+.resource .resource-wra .re-head .tabBox .link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 48px;
+  background: url(../images/tit_icon13.png) no-repeat;
+}
+.resource .resource-wra .re-head .tabBox .link::before {
+  left: 0;
+  background-position: left;
+}
+.resource .resource-wra .re-head .tabBox .link::after {
+  right: 0;
+  background-position: right;
+}
+.resource .resource-wra .photoList {
+  width: 100%;
+  height: 500px;
+  background-color: springgreen;
+}
+.resource .resource-wra .more {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+.resource .resource-wra .more .text {
+  display: inline-block;
+  width: 94px;
+  height: 24px;
+  background-color: sandybrown;
+  padding-left: 30px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  background: url(../images/more.png) left no-repeat;
+}

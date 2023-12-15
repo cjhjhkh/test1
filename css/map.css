@@ -1,0 +1,460 @@
+/*地图板块*/
+.map {
+  position: relative;
+  background: url(../images/mapBox_bgc.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-position: center center;
+  overflow: hidden;
+}
+.map .tit {
+  top: 15.83%;
+  text-align: center;
+  position: absolute;
+  height: 36px;
+  width: 100%;
+}
+.map .tit .text {
+  position: relative;
+  width: 354px;
+  height: 36px;
+  padding: 0 42px;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #fff;
+}
+.map .tit .text::before,
+.map .tit .text::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 36px;
+  background: url(../images/tit_icon\ 2.png) no-repeat;
+  background-size: 45px;
+}
+.map .tit .text::before {
+  background-position: left;
+  left: 0;
+}
+.map .tit .text::after {
+  background-position: right;
+  right: 0;
+}
+.map .contain {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  position: 50% 50%;
+}
+.map .contain .mapBox {
+  position: absolute;
+  top: 22.56%;
+  right: 50%;
+  margin-right: -180px;
+  width: 891px;
+  height: 641px;
+  background-color: salmon;
+  background: url(../images/map.png) no-repeat;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  background-size: contain;
+  text-align: center;
+  overflow: hidden;
+}
+.map .contain .mapBox .citys div[class^=city] {
+  position: absolute;
+  cursor: pointer;
+  white-space: normal;
+}
+.map .contain .mapBox .citys div[class^=city]:hover:not(:nth-child(12)) .name {
+  visibility: hidden;
+}
+.map .contain .mapBox .citys div[class^=city]:hover:not(:nth-child(12)) .data {
+  display: block;
+}
+.map .contain .mapBox .citys .name {
+  line-height: 16px;
+  color: #fff;
+}
+.map .contain .mapBox .citys .data {
+  position: absolute;
+  right: -10px;
+  bottom: 100%;
+  padding: 15px 50px 15px 22px;
+  background-color: #b3a087;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 0px rgba(4, 1, 1, 0.31);
+  white-space: nowrap;
+  display: none;
+}
+.map .contain .mapBox .citys .data::before,
+.map .contain .mapBox .citys .data::after {
+  content: '';
+  position: absolute;
+}
+.map .contain .mapBox .citys .data::before {
+  width: 18px;
+  height: 20px;
+  right: 22px;
+  top: 15px;
+  background-image: url(../images/locate.png);
+}
+.map .contain .mapBox .citys .data::after {
+  right: 10px;
+  top: 100%;
+  border: 8px solid transparent;
+  border-top-color: #b3a087;
+}
+.map .contain .mapBox .citys .data span {
+  color: #fff;
+}
+.map .contain .mapBox .citys .city1 {
+  left: 664px;
+  top: 100px;
+}
+.map .contain .mapBox .citys .city2 {
+  left: 656px;
+  top: 160px;
+}
+.map .contain .mapBox .citys .city3 {
+  left: 625px;
+  top: 204px;
+}
+.map .contain .mapBox .citys .city4 {
+  left: 545px;
+  top: 236px;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city5 {
+  left: 572px;
+  top: 255px;
+  z-index: 4;
+}
+.map .contain .mapBox .citys .city6 {
+  left: 535px;
+  top: 268px;
+  z-index: 4;
+}
+.map .contain .mapBox .citys .city7 {
+  left: 567px;
+  top: 306px;
+  z-index: 4;
+}
+.map .contain .mapBox .citys .city8 {
+  left: 615px;
+  top: 352px;
+  width: 1em;
+  line-height: 1;
+  z-index: 5;
+}
+.map .contain .mapBox .citys .city9 {
+  left: 642px;
+  top: 384px;
+  z-index: 6;
+}
+.map .contain .mapBox .citys .city10 {
+  left: 612px;
+  top: 423px;
+  z-index: 6;
+}
+.map .contain .mapBox .citys .city11 {
+  left: 588px;
+  top: 476px;
+  z-index: 9;
+}
+.map .contain .mapBox .citys .city12 {
+  left: 650px;
+  top: 502px;
+  width: 1em;
+  line-height: 1;
+  z-index: 10;
+}
+.map .contain .mapBox .citys .city13 {
+  left: 548px;
+  top: 549px;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city14 {
+  left: 530px;
+  top: 562px;
+  z-index: 8;
+}
+.map .contain .mapBox .citys .city15 {
+  left: 469px;
+  top: 605px;
+}
+.map .contain .mapBox .citys .city16 {
+  left: 572px;
+  top: 362px;
+  width: 1em;
+  line-height: 1;
+  z-index: 5;
+}
+.map .contain .mapBox .citys .city17 {
+  left: 548px;
+  top: 455px;
+  z-index: 8;
+}
+.map .contain .mapBox .citys .city18 {
+  left: 523px;
+  top: 523px;
+}
+.map .contain .mapBox .citys .city19 {
+  left: 500px;
+  top: 276px;
+  width: 1em;
+  line-height: 1;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city20 {
+  left: 509px;
+  top: 350px;
+  z-index: 4;
+}
+.map .contain .mapBox .citys .city21 {
+  left: 492px;
+  top: 396px;
+  z-index: 6;
+}
+.map .contain .mapBox .citys .city22 {
+  left: 488px;
+  top: 452px;
+  z-index: 7;
+}
+.map .contain .mapBox .citys .city23 {
+  left: 431px;
+  top: 521px;
+  max-width: 56px;
+  z-index: 7;
+}
+.map .contain .mapBox .citys .city24 {
+  left: 440px;
+  top: 350px;
+  z-index: 5;
+}
+.map .contain .mapBox .citys .city25 {
+  left: 424px;
+  top: 425px;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city26 {
+  left: 419px;
+  top: 468px;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city27 {
+  left: 372px;
+  top: 228px;
+}
+.map .contain .mapBox .citys .city28 {
+  left: 382px;
+  top: 329px;
+  z-index: 3;
+}
+.map .contain .mapBox .citys .city29 {
+  left: 353px;
+  top: 398px;
+}
+.map .contain .mapBox .citys .city30 {
+  left: 315px;
+  top: 503px;
+}
+.map .contain .mapBox .citys .city31 {
+  left: 260px;
+  top: 300px;
+}
+.map .contain .mapBox .citys .city32 {
+  left: 111px;
+  top: 209px;
+}
+.map .contain .mapBox .citys .city32 .data {
+  left: 10px;
+  right: inherit;
+}
+.map .contain .mapBox .citys .city32 .data::after {
+  left: 10px;
+  right: inherit;
+}
+.map .contain .mapBox .citys .city33 {
+  left: 134px;
+  top: 375px;
+}
+.map .contain .mapBox .citys .city34 {
+  left: 401px;
+  top: 287px;
+  max-width: 56px;
+}
+.map .contain .mapBox .citys .num {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 90px;
+  margin-bottom: 100px;
+  color: #fff;
+}
+.map .contain .statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 30.625%;
+  margin-left: 227px;
+  position: absolute;
+  width: 441px;
+  height: 563.46px;
+  padding: 26px 24px 14px 26px;
+  background-color: #9e8c73;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.48);
+  color: #fff;
+  font-family: "微软雅黑";
+}
+.map .contain .statistics .area {
+  width: 100%;
+  height: 28.79px;
+  margin-bottom: 22px;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+.map .contain .statistics .tab {
+  display: flex;
+  justify-content: center;
+  width: 304px;
+  height: 33.43px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #b8a588;
+}
+.map .contain .statistics .tab .tab-wrap {
+  height: 33.4px;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.map .contain .statistics .tab .tit1,
+.map .contain .statistics .tab .tit2 {
+  position: relative;
+  margin: 0 8px;
+  padding-bottom: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffedcf;
+}
+.map .contain .statistics .tab .tit1::before,
+.map .contain .statistics .tab .tit2::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-bottom: 9px solid #b8a588;
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}
+.map .contain .statistics .table {
+  width: 396px;
+  height: 324px;
+  margin-bottom: 13px;
+  margin-right: -5px;
+  overflow: hidden;
+}
+.map .contain .statistics .table .num {
+  font-family: impact;
+  font-size: 30px;
+}
+.map .contain .statistics .table .text {
+  margin: 0 25px;
+  font-size: 14px;
+}
+.map .contain .statistics .table .td {
+  width: 127px;
+  float: left;
+  margin: 0 5px 5px 0;
+  padding: 10px 0;
+  background-color: #b3a087;
+}
+.map .contain .statistics .table .td:nth-child(4),
+.map .contain .statistics .table .td:nth-child(5),
+.map .contain .statistics .table .td:nth-child(6) {
+  padding: 8px 0 0;
+  height: 108px;
+}
+.map .contain .statistics .table .td:nth-child(6) {
+  white-space: normal;
+}
+.map .contain .statistics .table .td:nth-child(7),
+.map .contain .statistics .table .td:nth-child(8) {
+  padding: 20px 0 29px;
+  height: 115px;
+}
+.map .contain .statistics .table .td:nth-child(8) {
+  width: 97px;
+}
+.map .contain .statistics .table .td:nth-child(9),
+.map .contain .statistics .table .td:nth-child(10) {
+  width: 157px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map .contain .statistics .table .td:nth-child(9) .num,
+.map .contain .statistics .table .td:nth-child(10) .num {
+  float: left;
+}
+.map .contain .statistics .table .td:nth-child(9) .text,
+.map .contain .statistics .table .td:nth-child(10) .text {
+  margin: 0 15px;
+}
+.map .contain .statistics .illustrate {
+  width: 371px;
+  height: 42px;
+  margin: 0 10px;
+  font-size: 14px;
+  white-space: normal;
+}
+.map .contain .statistics .total {
+  position: relative;
+  display: inline-block;
+  padding: 0 42px;
+  vertical-align: top;
+  font-size: 16px;
+}
+.map .contain .statistics .total .count {
+  padding: 0 10px;
+  font-family: impact;
+  font-size: 30px;
+}
+.map .contain .statistics .total .count::before,
+.map .contain .statistics .total .count::after {
+  content: '';
+  width: 24px;
+  height: 45px;
+  background: url(../images/tit_icon10.png) no-repeat;
+  position: absolute;
+}
+.map .contain .statistics .total .count::before {
+  left: 0;
+  top: 0;
+  background-position: left;
+}
+.map .contain .statistics .total .count:after {
+  right: 0;
+  bottom: 0;
+  background-position: right;
+}
+@media screen and (max-width: 1500px) {
+  .map .contain {
+    transform: scale(0.85);
+  }
+}
+@media screen and (max-width: 1400px) {
+  .map .tit {
+    top: 5%;
+  }
+  .map .contain {
+    top: -15%;
+  }
+  .map .contain .statistics {
+    top: 37.7%;
+  }
+}

@@ -1,0 +1,133 @@
+/*计划板块*/
+
+.plan{
+    position: relative;
+    // width: 100%;
+    // height: 100vh;
+    // background-color: salmon;
+    background: url(../images/plan_bgc.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    white-space: normal;
+    .img1,.img2{
+        position: absolute;
+        background-size: cover;
+        // transition: visibility .3s, opacity .3s;
+        opacity: 0;
+        // transition: all .85s;
+        transition: all 1s;
+        // visibility: hidden;
+    }
+    .img1{
+        width: 990px;
+        height: 472px;
+        top: 0;
+        right: 50%;
+        margin-right: -95px;
+        background-image: url(../images/img1.png);
+        transform: translateY(-472px);
+    }
+    .img2{
+        width: 1222px;
+        height: 540px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -260px;
+        background-image: url(../images/img2.png);
+        transform: translateY(472px);
+    }
+    .active{
+        opacity: 1;
+        // visibility: visible;
+        transform: translateY(0px);
+    }
+    .cont1,.cont2{
+        color: #fff;
+        width: 530px;
+        position: absolute;
+    }
+    .cont1{
+        // background-color: salmon;
+        right: 50%;
+        bottom: 12%;
+        margin-right: 15%;
+    }
+    .cont2{
+        left: 50%;
+        top: 15%;
+        margin-left: 15%;
+        text-align: right;
+        // background-color: sandybrown;
+    }
+    .tit{
+        font-size: 30px;
+        margin-bottom: 25px;
+        line-height: 44px;
+        &::before,&::after{
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 44px;
+            background: url(../images/tit_icon6.png) no-repeat;
+            position: relative;
+            vertical-align: top;
+        }
+        &::before{
+            background-position: left;
+            margin-right: 18px;
+        }
+        &::after{
+            background-position: right;
+            margin-left: 18px;
+
+        }
+    }
+    p{
+        font-size: 14px;
+        margin-bottom: 30px;
+        font-family: "微软雅黑";
+        text-align: justify;
+    }
+    .more{
+        position: relative;
+        width: 140px;
+        height: 24px;
+        font-family: "微软雅黑";
+        padding: 0 38px;
+        font-size: 16px;
+        display: inline-block;/*转为行内，text-align: right;才生效*/
+        white-space: nowrap;
+        a{
+            color: #fff;
+        }
+        a{
+            &:hover{
+                color: #9a2929;
+            }
+        }
+        &::before,&::after{
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/tit_icon7.png);
+        }
+        &::before{
+            background-position: top left;
+            left: 0;
+        }
+        &::after{
+            background-position: top right;
+            right: 0;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .plan .cont1{
+        margin-right: 10%;
+    }    
+    .plan .cont2{
+        margin-left: 10%;
+    }
+}

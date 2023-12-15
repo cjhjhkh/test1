@@ -1,0 +1,103 @@
+/*搜索框*/
+.tipAlert-wra {
+    display: none;
+    /* width: 100%; */
+    /* height: 100%; */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url(../images/alert_mask.png);
+    /* position: absolute; */
+    z-index: 43;
+  }
+  .tipAlert-wra .tipAlert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -120px;
+    padding: 30px;
+    background: #fff;
+    width: 270px;
+    height: 153px;
+    text-align: center;
+  }
+  .tipAlert-wra .tipAlert .text {
+    padding-bottom: 15px;
+    font-size: 16px;
+    color: #474747;
+  }
+  .tipAlert-wra .tipAlert .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/clos.png);
+    background-size: contain;
+  }
+  .tipAlert-wra .tipAlert .sub {
+    display: inline-block;
+    /*刚开始写的是display: block;导致text-align: center;对这个不起作用*/
+    width: 91px;
+    height: 29px;
+    background-color: #fff;
+    border: 1px solid #bbbbbb;
+    font-size: 14px;
+    color: #707070;
+  }
+  .a {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: salmon;
+    z-index: 1000;
+  }
+ .search .searchBox {
+    /*点击后出现搜索框*/
+    display: none;
+    opacity: 0;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    right: 160px;
+    top: -5px;
+    width: 356.67px;
+    height: 36px;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+ .search .searchBox .input_wra {
+    padding: 0 8px;
+    width: 316.67px;
+    height: 18.67px;
+    border-right: 1px solid #474747;
+  }
+ .search .searchBox input {
+    width: 300px;
+    height: 18.67px;
+    outline: none;
+    border: none;
+  }
+ .search .searchBox .search-btn {
+    padding: 0 5px;
+    width: 40px;
+    height: 100%;
+    background-color: seagreen;
+    border: none;
+    float: right;
+    background: url("../images/search\ \(1\).svg") no-repeat;
+    background-size: 35px 20px;
+    background-position: 2px 6px;
+    cursor: pointer;
+  }
+ .search .condict {
+    display: flex;
+  }
+ .search .active {
+    transform: translateX(-167px);
+    opacity: 1;
+  }
+  

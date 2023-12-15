@@ -1,0 +1,76 @@
+.footer a:hover {
+    color: #9a2929;
+}
+.footer .tit {
+    height: 26.39px;
+    width: 100%;
+    margin-bottom: 32px;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .footer a {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #333;
+    line-height: 1.8;
+  }
+.footer .about {
+    height: 238.94px;
+    width: 100%;
+    padding-top: 55px;
+    border-top: 1px solid #d8d8d8;
+  }
+  .footer .about .about-wra {
+    margin: 0 auto;
+    width: 1230px;
+    height: 182.94px;
+  }
+  .footer .about .about-wra .top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 47.2px;
+  }
+  .footer .about .about-wra .top .link-item {
+    position: relative;
+    height: 25.2px;
+    padding: 0 18px;
+  }
+  .footer .about .about-wra .top .link-item:not(:nth-child(1))::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 7px;
+    border-left: 1px solid #c7c7c7;
+    margin: auto;
+  }
+  .footer .about .about-wra .bottom {
+    width: 100%;
+    height: 100.78px;
+    margin: 0 0 35px;
+    text-align: center;
+  }
+  .footer .about .about-wra .bottom .cont {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #333;
+    line-height: 1.8;
+  }
+  .footer .about .about-wra .bottom .cont:nth-child(2) {
+    margin-left: 35px;
+  }
+  .footer .about .about-wra .bottom .cont img {
+    vertical-align: middle;
+  }
+  .footer .about .about-wra .bottom p {
+    padding-left: 40px;
+  }
+  .footer .about .about-wra .bottom .red {
+    color: #9a2929;
+  }
+  .footer .slot {
+    height: 100px;
+    width: 100%;
+  }

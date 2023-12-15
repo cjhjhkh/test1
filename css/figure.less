@@ -1,0 +1,284 @@
+/*人物板块*/
+
+.names{
+    .detail{
+
+            &:nth-child(2n){/*选择偶数个*/
+                transform: translateY(-90%);
+            }
+            &:nth-child(2n-1){/*选择奇数个*/
+                transform: translateY(90%);//-5%
+            }
+    }
+}
+
+
+.figure{
+
+    // width: 100vw;
+    // width: 100%;
+    // height: 100vh;
+    background-image: url(../images/figure-bgc.jpg);
+    background-size: cover;
+    // background-size: contain;
+    position: relative;
+    background-position: -2px center;
+    background-size: 105%;
+    // overflow: hidden;
+    .images{
+            position: relative;
+            // right: 100%;
+            height: 100%;
+            width: 50%;
+            // width: 670px;
+            right: 50%;
+            opacity: 0;
+            transition: visibility .3s, opacity .3s, right .8s;
+        div[class^=image]{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all .3s;
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // background-size: 90%;
+        }
+        .size{
+            // background-size: 100%;
+        }
+        .image1{
+            display: none;
+            background: url(../images/picture1.jpg);
+        }        
+        .image2{
+            display: none;
+            background-image: url(../images/picture2.jpg);
+        }        
+        .image3{
+            display: none;
+            background-image: url(../images/picture3.jpg);
+        }        
+        .image4{
+            display: none;
+            background-image: url(../images/picture4.jpg);
+        }        
+        .image5{
+            display: none;
+            background-image: url(../images/picture5.jpg);
+        }        
+        .image6{
+            display: none;
+            background-image: url(../images/picture6.jpg);
+        }
+        .active{
+            display: block;
+        }
+    }
+    .slide{
+        opacity: 1;
+        right: 0;
+    }
+
+    .names{        
+        position: absolute;
+        left: 50%;
+        // left: 670px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        color: #333;
+        // transition: visibility .3s, opacity .3s;
+        writing-mode: vertical-lr;/*竖向*/
+        // background-color: darkcyan;
+        .tit{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+        .tit{
+            height: 100%;
+            left: 13%;
+            font-size: 30px;
+            // letter-spacing: -1.5em;
+            // background-color: khaki;
+            .tit-wra{
+                position: relative;
+                // width: 34px;
+                width: 1em;/*一个文字的宽度*/
+                height: 150px;
+                padding: 45px 2px;
+                line-height: 1;/*居中*/
+                margin: auto;
+                &::before,&::after{
+                    content:'';
+                    width: 34px;
+                    height: 24px;
+                    background-image: url(../images/tit_icon3.png);
+                    position: absolute;
+                    left: 0;
+                }
+                &::before{
+                    background-position: left;
+                    top: 0;
+                }
+                &::after{
+                    background-position: right;
+                    bottom: 0;
+                }
+            }
+            
+        }
+        .a{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 26%;
+            width: 42%;
+            height: 100%;
+            text-align: justify;/**/
+        }
+        .detail{
+            // background-color: salmon;
+            position: relative;
+            // display: inline-block;
+            width: 22px;
+            height: 100%;
+            vertical-align: top;/*????*/
+            cursor: pointer;
+            transition: all 1s;
+            .text{
+                position: absolute;
+                // top: 46px;
+                padding: 25px 0 30px;
+                font-family: "微软雅黑";
+                font-size: 16px;
+                line-height: 1.375;
+                white-space: nowrap;
+                color: #333;
+                &::before,&::after{
+                    content: '';
+                    width: 22px;
+                    height: 12px;
+                    background-image: url(../images/tit_icon4.png);
+                    position: absolute;
+                    left: 0;
+                }
+                &::before{
+                    background-position: top left;
+                    top: 0;
+                }
+                &::after{
+                    bottom: 0;
+                    background-position: top right;
+                }
+            }
+            &::before{
+                content:'';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 50%;
+                border-left: 1px solid #ccc;
+            }     
+            &:hover{
+                &::before{
+                    border-color: #9a2929;
+                }
+                .text{
+                    color:#9a2929;
+                    &::before{
+                        background-position: bottom left;
+                    }
+                    &::after{
+                        background-position: bottom right;
+                    }
+                }
+            }        
+            &:nth-child(1) .text{
+                top: 40%;
+            }            
+            &:nth-child(2) .text{
+                top: 22%;
+            }            
+            &:nth-child(3) .text{
+                top: 37%;
+            }            
+            &:nth-child(4) .text{
+                top: 30%;
+            }         
+            &:nth-child(5) .text{
+                top: 43%;
+            }         
+            &:nth-child(6) .text{
+                top: 29%;
+            }
+
+        }
+        .active1{
+            transform: translateY(5%);
+        }
+        .active2{
+            transform: translateY(-5%);
+        }
+        .active{
+            transform: translateY(0);
+        }
+            .more{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 75%;
+                // background-color: seagreen;
+                font-family: "微软雅黑";
+                font-size: 16px;
+                padding: 35px 4px;
+                .more-link{
+                    position: relative;
+                    display: block;
+                    width: 24px;
+                    // width: 1em;
+                    line-height: 16px;
+                    height: 134px;
+                    padding: 35px 4px;
+                    font-size: 16px;
+                    margin: auto;
+                    color: #333;
+                    &::before,&::after{
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        background-image: url(../images/tit_icon5.png);
+                    }
+                    &::before{
+                        left: 0;
+                        background-position: left;
+                        top: 0;
+                    }
+                    &::after{
+                        right: 0;
+                        background-position: right;
+                        bottom: 0;
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    right: 50%;
+                    top: 0;
+                    bottom: 0;
+                    border-left: 1px solid #ccc;
+                }
+            }
+        .detail .text,.more-link{
+            background-image: url(../images/figure-bgc.jpg);
+        }
+    }
+}

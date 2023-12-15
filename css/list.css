@@ -1,0 +1,779 @@
+/*清单*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.contain {
+  width: 100vw;
+}
+.bread-mod {
+  position: absolute;
+  top: 142px;
+  left: 0;
+  padding: 18px 0;
+  width: 100%;
+  height: 58px;
+}
+.bread-mod .wra {
+  width: 1230px;
+  margin: auto;
+  font-family: "微软雅黑";
+  display: flex;
+  font-size: 14px;
+}
+.bread-mod .wra .bread-item {
+  position: relative;
+}
+.bread-mod .wra .bread-item:not(:nth-child(1)) {
+  margin-left: 28px;
+}
+.bread-mod .wra .bread-item:not(:nth-child(1))::before {
+  content: '';
+  position: absolute;
+  top: 7.5px;
+  left: -18px;
+  width: 6.5px;
+  height: 6.5px;
+  border: 1px solid #fff;
+  transform: rotate(-45deg);
+  border-left: none;
+  border-top: none;
+}
+.bread-mod .wra a {
+  color: #fff;
+}
+.bread-mod .wra a:hover {
+  color: #9a2929;
+}
+.list {
+  width: 100%;
+  height: 850px;
+  overflow: hidden;
+  background-color: salmon;
+}
+.list .image {
+  width: 50%;
+  height: 100%;
+  background-color: darkblue;
+  background: url(../images/menu_bgi.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+.list .menu {
+  width: 50%;
+  height: 100vh;
+  background-color: khaki;
+  float: right;
+}
+.inheritor,
+.roster {
+  width: 100%;
+  padding: 100px 0 50px;
+  overflow: hidden;
+  background-image: url(../images/inheritor-bgi.png);
+}
+.inheritor .inheritor-wra,
+.roster .inheritor-wra,
+.inheritor .roster-wra,
+.roster .roster-wra {
+  margin: auto;
+  width: 1230px;
+}
+.inheritor .inheritor-wra .title,
+.roster .inheritor-wra .title,
+.inheritor .roster-wra .title,
+.roster .roster-wra .title {
+  color: #333;
+  padding: 0 40px 53px;
+}
+.inheritor .inheritor-wra .title .tit,
+.roster .inheritor-wra .title .tit,
+.inheritor .roster-wra .title .tit,
+.roster .roster-wra .title .tit {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+}
+.inheritor .inheritor-wra .title .paragraph,
+.roster .inheritor-wra .title .paragraph,
+.inheritor .roster-wra .title .paragraph,
+.roster .roster-wra .title .paragraph {
+  font-size: 14px;
+  text-indent: 2em;
+  font-family: "微软雅黑";
+  padding: 30px 0 35px;
+  white-space: normal;
+}
+.inheritor .inheritor-wra .title .check,
+.roster .inheritor-wra .title .check,
+.inheritor .roster-wra .title .check,
+.roster .roster-wra .title .check {
+  position: relative;
+  width: 172px;
+  height: 24px;
+  padding: 0 38px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  margin: auto;
+}
+.inheritor .inheritor-wra .title .check::before,
+.roster .inheritor-wra .title .check::before,
+.inheritor .roster-wra .title .check::before,
+.roster .roster-wra .title .check::before,
+.inheritor .inheritor-wra .title .check::after,
+.roster .inheritor-wra .title .check::after,
+.inheritor .roster-wra .title .check::after,
+.roster .roster-wra .title .check::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-image: url(../images/tit_icon11.png);
+}
+.inheritor .inheritor-wra .title .check::before,
+.roster .inheritor-wra .title .check::before,
+.inheritor .roster-wra .title .check::before,
+.roster .roster-wra .title .check::before {
+  background-position: left top;
+  left: 0;
+}
+.inheritor .inheritor-wra .title .check::after,
+.roster .inheritor-wra .title .check::after,
+.inheritor .roster-wra .title .check::after,
+.roster .roster-wra .title .check::after {
+  background-position: right top;
+  right: 0;
+}
+.inheritor .inheritor-wra .nums,
+.roster .inheritor-wra .nums,
+.inheritor .roster-wra .nums,
+.roster .roster-wra .nums {
+  width: 100%;
+  margin-bottom: 57px;
+  text-align: center;
+}
+.inheritor .inheritor-wra .nums .numBox,
+.roster .inheritor-wra .nums .numBox,
+.inheritor .roster-wra .nums .numBox,
+.roster .roster-wra .nums .numBox {
+  display: inline-block;
+  width: 23%;
+  height: 100%;
+  vertical-align: top;
+}
+.inheritor .inheritor-wra .nums .numBox .number,
+.roster .inheritor-wra .nums .numBox .number,
+.inheritor .roster-wra .nums .numBox .number,
+.roster .roster-wra .nums .numBox .number {
+  font-family: impact;
+  font-size: 92px;
+  line-height: 1.3;
+  color: #333;
+}
+.inheritor .inheritor-wra .nums .numBox .mark,
+.roster .inheritor-wra .nums .numBox .mark,
+.inheritor .roster-wra .nums .numBox .mark,
+.roster .roster-wra .nums .numBox .mark {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #333;
+  font-family: 微软雅黑;
+}
+.inheritor .inheritor-wra .searchBox,
+.roster .inheritor-wra .searchBox,
+.inheritor .roster-wra .searchBox,
+.roster .roster-wra .searchBox {
+  width: 100%;
+  height: 48px;
+  color: #333;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+.inheritor .inheritor-wra .searchBox .select,
+.roster .inheritor-wra .searchBox .select,
+.inheritor .roster-wra .searchBox .select,
+.roster .roster-wra .searchBox .select,
+.inheritor .inheritor-wra .searchBox .input,
+.roster .inheritor-wra .searchBox .input,
+.inheritor .roster-wra .searchBox .input,
+.roster .roster-wra .searchBox .input {
+  margin-right: 16px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.inheritor .inheritor-wra .searchBox .select::before,
+.roster .inheritor-wra .searchBox .select::before,
+.inheritor .roster-wra .searchBox .select::before,
+.roster .roster-wra .searchBox .select::before,
+.inheritor .inheritor-wra .searchBox .input::before,
+.roster .inheritor-wra .searchBox .input::before,
+.inheritor .roster-wra .searchBox .input::before,
+.roster .roster-wra .searchBox .input::before,
+.inheritor .inheritor-wra .searchBox .select::after,
+.roster .inheritor-wra .searchBox .select::after,
+.inheritor .roster-wra .searchBox .select::after,
+.roster .roster-wra .searchBox .select::after,
+.inheritor .inheritor-wra .searchBox .input::after,
+.roster .inheritor-wra .searchBox .input::after,
+.inheritor .roster-wra .searchBox .input::after,
+.roster .roster-wra .searchBox .input::after {
+  content: '';
+  background-image: url(../images/frame2.png);
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.inheritor .inheritor-wra .searchBox .select::before,
+.roster .inheritor-wra .searchBox .select::before,
+.inheritor .roster-wra .searchBox .select::before,
+.roster .roster-wra .searchBox .select::before,
+.inheritor .inheritor-wra .searchBox .input::before,
+.roster .inheritor-wra .searchBox .input::before,
+.inheritor .roster-wra .searchBox .input::before,
+.roster .roster-wra .searchBox .input::before {
+  left: 0;
+  background-position: left;
+}
+.inheritor .inheritor-wra .searchBox .select::after,
+.roster .inheritor-wra .searchBox .select::after,
+.inheritor .roster-wra .searchBox .select::after,
+.roster .roster-wra .searchBox .select::after,
+.inheritor .inheritor-wra .searchBox .input::after,
+.roster .inheritor-wra .searchBox .input::after,
+.inheritor .roster-wra .searchBox .input::after,
+.roster .roster-wra .searchBox .input::after {
+  right: 0;
+  background-position: right;
+}
+.inheritor .inheritor-wra .searchBox .select,
+.roster .inheritor-wra .searchBox .select,
+.inheritor .roster-wra .searchBox .select,
+.roster .roster-wra .searchBox .select {
+  width: 206px;
+}
+.inheritor .inheritor-wra .searchBox .select .select-btn,
+.roster .inheritor-wra .searchBox .select .select-btn,
+.inheritor .roster-wra .searchBox .select .select-btn,
+.roster .roster-wra .searchBox .select .select-btn {
+  position: relative;
+  width: 186px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 25px 10px 5px;
+  line-height: 2;
+  background: url(../images/frame.png) repeat-x;
+}
+.inheritor .inheritor-wra .searchBox .select .select-btn::after,
+.roster .inheritor-wra .searchBox .select .select-btn::after,
+.inheritor .roster-wra .searchBox .select .select-btn::after,
+.roster .roster-wra .searchBox .select .select-btn::after {
+  content: '';
+  width: 6.5px;
+  height: 6.5px;
+  border: 1.5px solid #333;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 10px;
+  top: 17px;
+}
+.inheritor .inheritor-wra .searchBox .select .active::after,
+.roster .inheritor-wra .searchBox .select .active::after,
+.inheritor .roster-wra .searchBox .select .active::after,
+.roster .roster-wra .searchBox .select .active::after {
+  transform: rotate(225deg);
+}
+.inheritor .inheritor-wra .searchBox .input,
+.roster .inheritor-wra .searchBox .input,
+.inheritor .roster-wra .searchBox .input,
+.roster .roster-wra .searchBox .input {
+  width: 203px;
+  padding: 0 10px;
+}
+.inheritor .inheritor-wra .searchBox .input .inputBox,
+.roster .inheritor-wra .searchBox .input .inputBox,
+.inheritor .roster-wra .searchBox .input .inputBox,
+.roster .roster-wra .searchBox .input .inputBox {
+  width: 183px;
+  height: 100%;
+  background: url(../images/frame.png) repeat-x;
+}
+.inheritor .inheritor-wra .searchBox .input .inputBox input,
+.roster .inheritor-wra .searchBox .input .inputBox input,
+.inheritor .roster-wra .searchBox .input .inputBox input,
+.roster .roster-wra .searchBox .input .inputBox input {
+  width: 167px;
+  height: 100%;
+  outline: none;
+  border: none;
+  color: #333;
+  background: none;
+}
+.inheritor .inheritor-wra .searchBox .search,
+.roster .inheritor-wra .searchBox .search,
+.inheritor .roster-wra .searchBox .search,
+.roster .roster-wra .searchBox .search {
+  position: relative;
+  width: 120px;
+  height: 100%;
+  float: left;
+}
+.inheritor .inheritor-wra .searchBox .search .box,
+.roster .inheritor-wra .searchBox .search .box,
+.inheritor .roster-wra .searchBox .search .box,
+.roster .roster-wra .searchBox .search .box {
+  width: 100px;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/frame3.png) repeat-x;
+}
+.inheritor .inheritor-wra .searchBox .search .box button,
+.roster .inheritor-wra .searchBox .search .box button,
+.inheritor .roster-wra .searchBox .search .box button,
+.roster .roster-wra .searchBox .search .box button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+}
+.inheritor .inheritor-wra .searchBox .search::before,
+.roster .inheritor-wra .searchBox .search::before,
+.inheritor .roster-wra .searchBox .search::before,
+.roster .roster-wra .searchBox .search::before,
+.inheritor .inheritor-wra .searchBox .search::after,
+.roster .inheritor-wra .searchBox .search::after,
+.inheritor .roster-wra .searchBox .search::after,
+.roster .roster-wra .searchBox .search::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  background-image: url(../images/frame4.png);
+  width: 10px;
+  height: 100%;
+}
+.inheritor .inheritor-wra .searchBox .search::before,
+.roster .inheritor-wra .searchBox .search::before,
+.inheritor .roster-wra .searchBox .search::before,
+.roster .roster-wra .searchBox .search::before {
+  background-position: left;
+  left: 0;
+}
+.inheritor .inheritor-wra .searchBox .search::after,
+.roster .inheritor-wra .searchBox .search::after,
+.inheritor .roster-wra .searchBox .search::after,
+.roster .roster-wra .searchBox .search::after {
+  background-position: right;
+  right: 0;
+}
+.inheritor .inheritor-wra .select:hover .select-btn::after,
+.roster .inheritor-wra .select:hover .select-btn::after,
+.inheritor .roster-wra .select:hover .select-btn::after,
+.roster .roster-wra .select:hover .select-btn::after {
+  border-color: #909090;
+}
+.inheritor .inheritor-wra .select .cont,
+.roster .inheritor-wra .select .cont,
+.inheritor .roster-wra .select .cont,
+.roster .roster-wra .select .cont {
+  display: none;
+  position: relative;
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: khaki;
+  background: url(../images/frame5.png) repeat-y;
+  background-clip: content-box;
+  background-size: contain;
+}
+.inheritor .inheritor-wra .select .cont::before,
+.roster .inheritor-wra .select .cont::before,
+.inheritor .roster-wra .select .cont::before,
+.roster .roster-wra .select .cont::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15px;
+  bottom: 0;
+  background: url(../images/frame6.png) no-repeat;
+  background-size: contain;
+}
+.inheritor .inheritor-wra .select .cont .wra,
+.roster .inheritor-wra .select .cont .wra,
+.inheritor .roster-wra .select .cont .wra,
+.roster .roster-wra .select .cont .wra {
+  position: relative;
+  max-height: 230px;
+  padding: 15px 5px 15px 15px;
+}
+.inheritor .inheritor-wra .select .cont .wra .box,
+.roster .inheritor-wra .select .cont .wra .box,
+.inheritor .roster-wra .select .cont .wra .box,
+.roster .roster-wra .select .cont .wra .box {
+  position: relative;
+  height: 100%;
+  max-height: 200px;
+  max-width: 100%;
+}
+.inheritor .inheritor-wra .select .cont .wra .box ul,
+.roster .inheritor-wra .select .cont .wra .box ul,
+.inheritor .roster-wra .select .cont .wra .box ul,
+.roster .roster-wra .select .cont .wra .box ul {
+  position: relative;
+  top: -4px;
+  left: 0px;
+  margin-right: 30px;
+  overflow: scroll;
+  width: 187px;
+  max-height: 200px;
+}
+.inheritor .inheritor-wra .select .cont .wra .box ul li,
+.roster .inheritor-wra .select .cont .wra .box ul li,
+.inheritor .roster-wra .select .cont .wra .box ul li,
+.roster .roster-wra .select .cont .wra .box ul li {
+  padding: 2px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.inheritor .inheritor-wra .select .cont .wra .box ul::-webkit-scrollbar,
+.roster .inheritor-wra .select .cont .wra .box ul::-webkit-scrollbar,
+.inheritor .roster-wra .select .cont .wra .box ul::-webkit-scrollbar,
+.roster .roster-wra .select .cont .wra .box ul::-webkit-scrollbar {
+  height: 0;
+  width: 5px;
+}
+.inheritor .inheritor-wra .select .cont .wra .box ul::-webkit-scrollbar-thumb,
+.roster .inheritor-wra .select .cont .wra .box ul::-webkit-scrollbar-thumb,
+.inheritor .roster-wra .select .cont .wra .box ul::-webkit-scrollbar-thumb,
+.roster .roster-wra .select .cont .wra .box ul::-webkit-scrollbar-thumb {
+  height: 47px;
+  background-color: #474747;
+  border-radius: 16px;
+}
+.inheritor .inheritor-wra .select .active,
+.roster .inheritor-wra .select .active,
+.inheritor .roster-wra .select .active,
+.roster .roster-wra .select .active {
+  display: block;
+}
+.inheritor .inheritor-wra .select:nth-child(1) .box::before,
+.roster .inheritor-wra .select:nth-child(1) .box::before,
+.inheritor .roster-wra .select:nth-child(1) .box::before,
+.roster .roster-wra .select:nth-child(1) .box::before,
+.inheritor .inheritor-wra .select:nth-child(3) .box::before,
+.roster .inheritor-wra .select:nth-child(3) .box::before,
+.inheritor .roster-wra .select:nth-child(3) .box::before,
+.roster .roster-wra .select:nth-child(3) .box::before {
+  /*滚动条后面的线*/
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #909090;
+  right: 1.5px;
+}
+.inheritor .inheritor-wra .result,
+.roster .inheritor-wra .result,
+.inheritor .roster-wra .result,
+.roster .roster-wra .result {
+  font-size: 18px;
+  font-family: "微软雅黑";
+  color: #333;
+  padding: 50px 0 25px;
+}
+.inheritor .inheritor-wra .result .col,
+.roster .inheritor-wra .result .col,
+.inheritor .roster-wra .result .col,
+.roster .roster-wra .result .col {
+  color: #9A2929;
+}
+.inheritor .inheritor-wra .table,
+.roster .inheritor-wra .table,
+.inheritor .roster-wra .table,
+.roster .roster-wra .table {
+  width: 100%;
+  background: url(../images/table_bgi.jpg) no-repeat;
+  font-family: "微软雅黑";
+  margin-bottom: 50px;
+  white-space: normal;
+}
+.inheritor .inheritor-wra .table th,
+.roster .inheritor-wra .table th,
+.inheritor .roster-wra .table th,
+.roster .roster-wra .table th {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 68px;
+}
+.inheritor .inheritor-wra .table th:nth-child(1),
+.roster .inheritor-wra .table th:nth-child(1),
+.inheritor .roster-wra .table th:nth-child(1),
+.roster .roster-wra .table th:nth-child(1) {
+  width: 105px;
+}
+.inheritor .inheritor-wra .table th:nth-child(2),
+.roster .inheritor-wra .table th:nth-child(2),
+.inheritor .roster-wra .table th:nth-child(2),
+.roster .roster-wra .table th:nth-child(2) {
+  width: 95px;
+}
+.inheritor .inheritor-wra .table th:nth-child(3),
+.roster .inheritor-wra .table th:nth-child(3),
+.inheritor .roster-wra .table th:nth-child(3),
+.roster .roster-wra .table th:nth-child(3) {
+  width: 130px;
+}
+.inheritor .inheritor-wra .table th:nth-child(4),
+.roster .inheritor-wra .table th:nth-child(4),
+.inheritor .roster-wra .table th:nth-child(4),
+.roster .roster-wra .table th:nth-child(4),
+.inheritor .inheritor-wra .table th:nth-child(5),
+.roster .inheritor-wra .table th:nth-child(5),
+.inheritor .roster-wra .table th:nth-child(5),
+.roster .roster-wra .table th:nth-child(5) {
+  width: 145px;
+}
+.inheritor .inheritor-wra .table th:nth-child(6),
+.roster .inheritor-wra .table th:nth-child(6),
+.inheritor .roster-wra .table th:nth-child(6),
+.roster .roster-wra .table th:nth-child(6),
+.inheritor .inheritor-wra .table th:nth-child(7),
+.roster .inheritor-wra .table th:nth-child(7),
+.inheritor .roster-wra .table th:nth-child(7),
+.roster .roster-wra .table th:nth-child(7) {
+  width: 151px;
+}
+.inheritor .inheritor-wra .table th:nth-child(8),
+.roster .inheritor-wra .table th:nth-child(8),
+.inheritor .roster-wra .table th:nth-child(8),
+.roster .roster-wra .table th:nth-child(8) {
+  width: 308px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(1),
+.roster .inheritor-wra .table .proj:nth-child(1),
+.inheritor .roster-wra .table .proj:nth-child(1),
+.roster .roster-wra .table .proj:nth-child(1) {
+  width: 111px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(2),
+.roster .inheritor-wra .table .proj:nth-child(2),
+.inheritor .roster-wra .table .proj:nth-child(2),
+.roster .roster-wra .table .proj:nth-child(2) {
+  width: 128px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(3),
+.roster .inheritor-wra .table .proj:nth-child(3),
+.inheritor .roster-wra .table .proj:nth-child(3),
+.roster .roster-wra .table .proj:nth-child(3) {
+  width: 130px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(4),
+.roster .inheritor-wra .table .proj:nth-child(4),
+.inheritor .roster-wra .table .proj:nth-child(4),
+.roster .roster-wra .table .proj:nth-child(4) {
+  width: 232px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(5),
+.roster .inheritor-wra .table .proj:nth-child(5),
+.inheritor .roster-wra .table .proj:nth-child(5),
+.roster .roster-wra .table .proj:nth-child(5) {
+  width: 127px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(6),
+.roster .inheritor-wra .table .proj:nth-child(6),
+.inheritor .roster-wra .table .proj:nth-child(6),
+.roster .roster-wra .table .proj:nth-child(6),
+.inheritor .inheritor-wra .table .proj:nth-child(7),
+.roster .inheritor-wra .table .proj:nth-child(7),
+.inheritor .roster-wra .table .proj:nth-child(7),
+.roster .roster-wra .table .proj:nth-child(7) {
+  width: 128px;
+}
+.inheritor .inheritor-wra .table .proj:nth-child(8),
+.roster .inheritor-wra .table .proj:nth-child(8),
+.inheritor .roster-wra .table .proj:nth-child(8),
+.roster .roster-wra .table .proj:nth-child(8),
+.inheritor .inheritor-wra .table .proj:nth-child(9),
+.roster .inheritor-wra .table .proj:nth-child(9),
+.inheritor .roster-wra .table .proj:nth-child(9),
+.roster .roster-wra .table .proj:nth-child(9) {
+  width: 374px;
+}
+.inheritor .inheritor-wra .table td,
+.roster .inheritor-wra .table td,
+.inheritor .roster-wra .table td,
+.roster .roster-wra .table td {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  padding: 23px 0;
+  border-bottom: 1px dashed #b5b5b5;
+}
+.inheritor .inheritor-wra .table tr:hover td,
+.roster .inheritor-wra .table tr:hover td,
+.inheritor .roster-wra .table tr:hover td,
+.roster .roster-wra .table tr:hover td,
+.inheritor .inheritor-wra .table tr:hover a,
+.roster .inheritor-wra .table tr:hover a,
+.inheritor .roster-wra .table tr:hover a,
+.roster .roster-wra .table tr:hover a {
+  color: #972A2A;
+}
+.inheritor .inheritor-wra .pageBox,
+.roster .inheritor-wra .pageBox,
+.inheritor .roster-wra .pageBox,
+.roster .roster-wra .pageBox {
+  width: 100%;
+  height: 30px;
+  background-color: salmon;
+}
+.inheritor .inheritor-wra .pageBox .pageItem,
+.roster .inheritor-wra .pageBox .pageItem,
+.inheritor .roster-wra .pageBox .pageItem,
+.roster .roster-wra .pageBox .pageItem {
+  width: 583px;
+  height: 100%;
+  background-color: khaki;
+  margin: auto;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .active,
+.roster .inheritor-wra .pageBox .pageItem .active,
+.inheritor .roster-wra .pageBox .pageItem .active,
+.roster .roster-wra .pageBox .pageItem .active {
+  background-color: #9a2929;
+  color: #fff;
+}
+.inheritor .inheritor-wra .pageBox .pageItem li,
+.roster .inheritor-wra .pageBox .pageItem li,
+.inheritor .roster-wra .pageBox .pageItem li,
+.roster .roster-wra .pageBox .pageItem li {
+  float: left;
+  font-family: 'xfont', Arial;
+  line-height: 1.875;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 6px;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .num,
+.roster .inheritor-wra .pageBox .pageItem .num,
+.inheritor .roster-wra .pageBox .pageItem .num,
+.roster .roster-wra .pageBox .pageItem .num {
+  min-width: 30px;
+  height: 100%;
+  background-color: salmon;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .num a,
+.roster .inheritor-wra .pageBox .pageItem .num a,
+.inheritor .roster-wra .pageBox .pageItem .num a,
+.roster .roster-wra .pageBox .pageItem .num a {
+  display: block;
+  padding: 0 5px;
+  border-radius: 33px;
+  transition: all 0.2s;
+  background-color: #9a2929;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .pre-next,
+.roster .inheritor-wra .pageBox .pageItem .pre-next,
+.inheritor .roster-wra .pageBox .pageItem .pre-next,
+.roster .roster-wra .pageBox .pageItem .pre-next {
+  height: 100%;
+  min-width: 30px;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .pre-next a,
+.roster .inheritor-wra .pageBox .pageItem .pre-next a,
+.inheritor .roster-wra .pageBox .pageItem .pre-next a,
+.roster .roster-wra .pageBox .pageItem .pre-next a {
+  display: block;
+  height: 30px;
+  width: 13px;
+  margin: 0 7px 0 10px;
+  background: url(../images/pre-next.png) no-repeat;
+  background-position: right;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .active,
+.roster .inheritor-wra .pageBox .pageItem .active,
+.inheritor .roster-wra .pageBox .pageItem .active,
+.roster .roster-wra .pageBox .pageItem .active {
+  background-image: url(../images/pre-next2.png);
+  background-color: transparent;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text,
+.roster .inheritor-wra .pageBox .pageItem .text,
+.inheritor .roster-wra .pageBox .pageItem .text,
+.roster .roster-wra .pageBox .pageItem .text {
+  color: #333;
+  margin: 0 6px 0 15px;
+  height: 100%;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text span,
+.roster .inheritor-wra .pageBox .pageItem .text span,
+.inheritor .roster-wra .pageBox .pageItem .text span,
+.roster .roster-wra .pageBox .pageItem .text span {
+  display: inline-block;
+  background-color: seagreen;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text .input,
+.roster .inheritor-wra .pageBox .pageItem .text .input,
+.inheritor .roster-wra .pageBox .pageItem .text .input,
+.roster .roster-wra .pageBox .pageItem .text .input {
+  display: inline-block;
+  position: relative;
+  padding-right: 8px;
+  width: 63px;
+  height: 30px;
+  background: url(../images/input.png) no-repeat center;
+  margin: 0 5px;
+  background-color: sandybrown;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text .input input,
+.roster .inheritor-wra .pageBox .pageItem .text .input input,
+.inheritor .roster-wra .pageBox .pageItem .text .input input,
+.roster .roster-wra .pageBox .pageItem .text .input input {
+  width: 55px;
+  height: 20px;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: none;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text span,
+.roster .inheritor-wra .pageBox .pageItem .text span,
+.inheritor .roster-wra .pageBox .pageItem .text span,
+.roster .roster-wra .pageBox .pageItem .text span,
+.inheritor .inheritor-wra .pageBox .pageItem .text button,
+.roster .inheritor-wra .pageBox .pageItem .text button,
+.inheritor .roster-wra .pageBox .pageItem .text button,
+.roster .roster-wra .pageBox .pageItem .text button {
+  position: relative;
+  top: -9px;
+}
+.inheritor .inheritor-wra .pageBox .pageItem .text button,
+.roster .inheritor-wra .pageBox .pageItem .text button,
+.inheritor .roster-wra .pageBox .pageItem .text button,
+.roster .roster-wra .pageBox .pageItem .text button {
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 36px;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: salmon;
+  border: none;
+}

@@ -1,0 +1,101 @@
+.hotSpot {
+  display: none;
+  min-height: 109px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/hotSpot.png) no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  padding-top: 33px;
+  transition: all 700ms;
+}
+.hotSpot .hot-wra {
+  display: flex;
+  position: relative;
+  height: 76px;
+  width: 88%;
+  margin: auto;
+}
+.hotSpot .hot-wra .tit {
+  color: #fff;
+  padding-top: 23px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+.hotSpot .hot-wra .cont {
+  height: 100%;
+  padding: 0 200px 0 60px;
+  overflow: hidden;
+}
+.hotSpot .hot-wra .cont .area {
+  height: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.hotSpot .hot-wra .cont .area .itemBox {
+  height: 100%;
+}
+.hotSpot .hot-wra .cont .area .itemBox .item {
+  display: inline-block;
+  width: 746px;
+  height: 76px;
+  padding-top: 28px;
+  margin-right: 70px;
+}
+.hotSpot .hot-wra .cont .area .itemBox .item a {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  color: #fff;
+  padding: 2px 0 0 42px;
+}
+.hotSpot .hot-wra .cont .area .itemBox .item a::before {
+  content: '';
+  width: 23px;
+  height: 23px;
+  background-image: url(../images/item-icon.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.hotSpot .hot-wra .close {
+  position: relative;
+  top: 27%;
+  width: 44px;
+  height: 34px;
+}
+.hotSpot .hot-wra .close a {
+  display: inline-block;
+  width: 42.53px;
+  height: 42.53px;
+  background: url(../images/close.png) no-repeat;
+  margin-left: 10px;
+}
+.active {
+  display: flex;
+}
+@media screen and (max-width: 1600px) and (min-width: 1340px) {
+  .hotSpot .hot-wra .cont .area .itemBox .item {
+    margin-right: 40px;
+    min-width: 217px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .hotSpot .hot-wra {
+    width: 77.0833%;
+  }
+  .hotSpot .hot-wra .cont {
+    padding-left: 120px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .hotSpot .hot-wra .cont .area .itemBox .item {
+    margin-right: 70px;
+    min-width: 217px;
+    width: auto;
+  }
+}

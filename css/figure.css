@@ -1,0 +1,259 @@
+/*人物板块*/
+.names .detail:nth-child(2n) {
+  /*选择偶数个*/
+  transform: translateY(-90%);
+}
+.names .detail:nth-child(2n-1) {
+  /*选择奇数个*/
+  transform: translateY(90%);
+}
+.figure {
+  background-image: url(../images/figure-bgc.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: -2px center;
+  background-size: 105%;
+}
+.figure .images {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  right: 50%;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s, right 0.8s;
+}
+.figure .images div[class^=image] {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.figure .images .image1 {
+  display: none;
+  background: url(../images/picture1.jpg);
+}
+.figure .images .image2 {
+  display: none;
+  background-image: url(../images/picture2.jpg);
+}
+.figure .images .image3 {
+  display: none;
+  background-image: url(../images/picture3.jpg);
+}
+.figure .images .image4 {
+  display: none;
+  background-image: url(../images/picture4.jpg);
+}
+.figure .images .image5 {
+  display: none;
+  background-image: url(../images/picture5.jpg);
+}
+.figure .images .image6 {
+  display: none;
+  background-image: url(../images/picture6.jpg);
+}
+.figure .images .active {
+  display: block;
+}
+.figure .slide {
+  opacity: 1;
+  right: 0;
+}
+.figure .names {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: #333;
+  writing-mode: vertical-lr;
+  /*竖向*/
+}
+.figure .names .tit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.figure .names .tit {
+  height: 100%;
+  left: 13%;
+  font-size: 30px;
+}
+.figure .names .tit .tit-wra {
+  position: relative;
+  width: 1em;
+  /*一个文字的宽度*/
+  height: 150px;
+  padding: 45px 2px;
+  line-height: 1;
+  /*居中*/
+  margin: auto;
+}
+.figure .names .tit .tit-wra::before,
+.figure .names .tit .tit-wra::after {
+  content: '';
+  width: 34px;
+  height: 24px;
+  background-image: url(../images/tit_icon3.png);
+  position: absolute;
+  left: 0;
+}
+.figure .names .tit .tit-wra::before {
+  background-position: left;
+  top: 0;
+}
+.figure .names .tit .tit-wra::after {
+  background-position: right;
+  bottom: 0;
+}
+.figure .names .a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 26%;
+  width: 42%;
+  height: 100%;
+  text-align: justify;
+  /**/
+}
+.figure .names .detail {
+  position: relative;
+  width: 22px;
+  height: 100%;
+  vertical-align: top;
+  /*????*/
+  cursor: pointer;
+  transition: all 1s;
+}
+.figure .names .detail .text {
+  position: absolute;
+  padding: 25px 0 30px;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  line-height: 1.375;
+  white-space: nowrap;
+  color: #333;
+}
+.figure .names .detail .text::before,
+.figure .names .detail .text::after {
+  content: '';
+  width: 22px;
+  height: 12px;
+  background-image: url(../images/tit_icon4.png);
+  position: absolute;
+  left: 0;
+}
+.figure .names .detail .text::before {
+  background-position: top left;
+  top: 0;
+}
+.figure .names .detail .text::after {
+  bottom: 0;
+  background-position: top right;
+}
+.figure .names .detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  border-left: 1px solid #ccc;
+}
+.figure .names .detail:hover::before {
+  border-color: #9a2929;
+}
+.figure .names .detail:hover .text {
+  color: #9a2929;
+}
+.figure .names .detail:hover .text::before {
+  background-position: bottom left;
+}
+.figure .names .detail:hover .text::after {
+  background-position: bottom right;
+}
+.figure .names .detail:nth-child(1) .text {
+  top: 40%;
+}
+.figure .names .detail:nth-child(2) .text {
+  top: 22%;
+}
+.figure .names .detail:nth-child(3) .text {
+  top: 37%;
+}
+.figure .names .detail:nth-child(4) .text {
+  top: 30%;
+}
+.figure .names .detail:nth-child(5) .text {
+  top: 43%;
+}
+.figure .names .detail:nth-child(6) .text {
+  top: 29%;
+}
+.figure .names .active1 {
+  transform: translateY(5%);
+}
+.figure .names .active2 {
+  transform: translateY(-5%);
+}
+.figure .names .active {
+  transform: translateY(0);
+}
+.figure .names .more {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 75%;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  padding: 35px 4px;
+}
+.figure .names .more .more-link {
+  position: relative;
+  display: block;
+  width: 24px;
+  line-height: 16px;
+  height: 134px;
+  padding: 35px 4px;
+  font-size: 16px;
+  margin: auto;
+  color: #333;
+}
+.figure .names .more .more-link::before,
+.figure .names .more .more-link::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(../images/tit_icon5.png);
+}
+.figure .names .more .more-link::before {
+  left: 0;
+  background-position: left;
+  top: 0;
+}
+.figure .names .more .more-link::after {
+  right: 0;
+  background-position: right;
+  bottom: 0;
+}
+.figure .names .more::before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #ccc;
+}
+.figure .names .detail .text,
+.figure .names .more-link {
+  background-image: url(../images/figure-bgc.jpg);
+}
